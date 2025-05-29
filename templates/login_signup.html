@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="{% static 'styles/login_signup.css' %}">
+    <script src="{% static 'scripts/login_signup.js'%}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h1 id="title">Recipe Share</h1>
+
+    <div id="content">
+        <div id="signup">
+            <h3 id="sub-title">Register</h3>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname"><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="sign-up-email" name="email"><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="sign-up-password" name="password"><br>
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password"><br>
+
+            <button onclick="signUp()">Submit</button>
+        </div>
+
+        <div id="login">
+            <h3 id="sub-title">Log in</h3>
+            <label for="email">Email:</label>
+            <input type="email" id="log-in-email" name="email"><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="log-in-password" name="password"><br>
+
+            <button onclick="logIn()">Submit</button>
+
+        </div>
+    </div>
+</body>
+</html>

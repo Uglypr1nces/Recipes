@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="{% static 'styles/recipes.css' %}">
+    <script src="{% static 'scripts/recipes.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <h1 id="title"></h1>
+
+    <div id="content">
+        <div id="top-bar">
+            <p>All posted recipes:</p>
+
+            <button onclick="addRecipe()">+ Create</button>
+            <button onclick="logOut()">logout</button>
+        </div>
+
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Under</th>
+                    <th>Posted By</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="recipe-table-body">
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>

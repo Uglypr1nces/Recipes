@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Recipes</title>
+    <link rel="stylesheet" href="{% static 'styles/edit_recipe.css' %}">
+
+</head>
+
+<body>
+    <h1 id="title">Edit a Recipe!</h1>
+
+    <div id="top-bar">
+        <p>All posted recipes:</p>
+
+        <button id="recipes-button">back to recipes</button>
+        <button id="logout-button">logout</button>
+    </div>
+    <div id="content">
+        <div id="left-side">
+            <label for="recipe_name">Recipe:</label>
+            <input type="text" id="recipe_name" name="recipe_name"><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" cols="40"></textarea><br>
+
+            <label for="instructions">Instructions:</label>
+            <textarea id="instructions" name="instructions" rows="6" cols="40"></textarea><br>
+        </div>
+        <div id="right-side">
+            <h1>Date Cooked/Made</h1>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"><br><br>
+
+            <p>Under 30 minutes?</p>
+
+            <input type="radio" id="under-30" name="time_required" value="yes">
+            <label for="under-30">Yes</label>
+
+            <input type="radio" id="over-30" name="time_required" value="no">
+            <label for="over-30">No</label>
+
+            <br><br>
+            <button id="add-recipe">Submit</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

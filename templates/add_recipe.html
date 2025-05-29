@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipes</title>
+    <link rel="stylesheet" href="{% static 'styles/add_recipe.css' %}">
+    <script src="{% static 'scripts/add_recipe.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+    <h1 id="title">Add a New Recipe!</h1>
+
+    <div id="top-bar">
+        <p>All posted recipes:</p>
+
+        <button onclick="goBack()">back to recipes</button>
+        <button onclick="logOut()">logout</button>
+    </div>
+    <div id="content">
+       <div id="left-side">
+        <label for="recipe-name">Recipe:</label>
+        <input type="text" id="recipe-name" name="recipe_name"><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" cols="40"></textarea><br>
+
+        <label for="instructions">Instructions:</label>
+        <textarea id="instructions" name="instructions" rows="6" cols="40"></textarea><br>
+    </div>
+
+    <div id="right-side">
+        <h1>Date Cooked/Made</h1>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <p>Under 30 minutes?</p>
+
+        <input type="radio" id="under-30" name="time_required" value="under30">
+        <label for="under-30">Yes</label>
+
+        <input type="radio" id="over-30" name="time_required" value="over30">
+        <label for="over-30">No</label>
+
+        <br><br>
+        <button onclick="addRecipe()">Submit</button>
+    </div>
+
+    </div>
+</body>
+
+</html>
