@@ -13,11 +13,18 @@
 </head>
 
 <body>
-    <h1 id="site-title"> Sasquatch Websighting</h1>
-    <h3 id="site-username">Dashboard</h1>
+    <div id="top-bar">
+        <div id="left-side-bar">
+            <h1 id="site-title"> Sasquatch Websighting</h1>
+        </div>
+        <div id="right-side-bar">
+            <h3 id="site-username">Dashboard</h1>
+            <button onclick="addSight()">Report a sighting</button>
+            <button onclick="logout()">logout</button>
+        </div>
+    </div>
     
-    <button onclick="addSight()">Report a sighting</button>
-    <button onclick="logout()">logout</button>
+    <h3>Reported Sightings</h3>
 
     <div id="content">
         <table border="1" cellpadding="8" cellspacing="0">

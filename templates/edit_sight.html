@@ -7,16 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change sight</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="{% static 'styles/add_sight.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/edit_sight.css' %}">
     <script src="{% static 'scripts/edit_sight.js' %}"></script>
 
 
 </head>
 
 <body>
-    <h1 id="site-title">Sasquatch Websighting</h1>
-    <h3>Change Your sight</h3>
+    <div id="top-bar">
+        <div id="left-side-bar">
+            <h1 id="site-title"> Sasquatch Websighting</h1>
+        </div>
+        <div id="right-side-bar">
+            <h3 id="site-username">Dashboard</h1>
+            <button onclick="returnHome()">return Home</button>
+            <button onclick="logout()">logout</button>
+        </div>
+    </div>
 
+    <h3>Edit Sight</h3>
+    
     <div id="content">
        <div id="left-side">
         <label for="sight-name">Location:</label>
@@ -30,9 +40,9 @@
 
         <label for="description">What Happened?</label>
         <textarea id="description" name="description" rows="6" cols="40"></textarea><br>
-    </div>
 
-    <button onclick="editSight()">Edit</button>
+        <button onclick="editSight()">Edit</button>
+    </div>
 </body>
 
 </html>

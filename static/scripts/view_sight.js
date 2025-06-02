@@ -2,8 +2,12 @@ window.onload = checkLogged;
 
 document.addEventListener("DOMContentLoaded", (event) => {
     const username = document.getElementById("site-username");
-    //username.textContent = "Welcome, " + localStorage.getItem("first_name");
+    username.textContent = "Welcome, " + localStorage.getItem("first_name");
 });
+
+function returnHome() {
+  window.location.href = "/dashboard/";
+}
 
 function checkLogged() {
     if (localStorage.getItem("first_name") === null) {

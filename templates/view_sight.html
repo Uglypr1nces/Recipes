@@ -10,7 +10,16 @@
     <script src="{% static 'scripts/view_sight.js'%}"></script>
 </head>
 <body>
-
+    <div id="top-bar">
+        <div id="left-side-bar">
+            <h1 id="site-title"> Sasquatch Websighting</h1>
+        </div>
+        <div id="right-side-bar">
+            <h3 id="site-username">Viewing Sight</h1>
+            <button onclick="returnHome()">Return to home</button>
+            <button onclick="logout()">logout</button>
+        </div>
+    </div>
     <div id="content">
         <h2 id="header">Location & Date</h2>
 

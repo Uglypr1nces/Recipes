@@ -61,3 +61,8 @@ function addSight() {
         });
     }
 }
+
+
+function returnHome() {
+  window.location.href = "/dashboard/";
+}

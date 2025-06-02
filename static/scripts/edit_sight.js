@@ -65,3 +65,7 @@ function editSight() {
         });
     }
 }
+
+function returnHome() {
+  window.location.href = "/dashboard/";
+}

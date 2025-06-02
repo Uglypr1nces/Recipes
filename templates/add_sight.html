@@ -14,8 +14,18 @@
 </head>
 
 <body>
-    <h1 id="site-title">Sasquatch Websighting</h1>
-    <h3>Report a sight</h3>
+    <div id="top-bar">
+        <div id="left-side-bar">
+            <h1 id="site-title"> Sasquatch Websighting</h1>
+        </div>
+        <div id="right-side-bar">
+            <h3 id="site-username">Add Sight</h1>
+            <button onclick="returnHome()">return Home</button>
+            <button onclick="logout()">logout</button>
+        </div>
+    </div>
+
+    <h3>Add sight</h3>
 
     <div id="content">
        <div id="left-side">
@@ -30,9 +40,9 @@
 
         <label for="description">What Happened?</label>
         <textarea id="description" name="description" rows="6" cols="40"></textarea><br>
-    </div>
+        <button onclick="addSight()">Report</button>
 
-    <button onclick="addSight()">Report</button>
+    </div>
 </body>
 
 </html>
