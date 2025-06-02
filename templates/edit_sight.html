@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Sight</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{% static 'styles/add_sight.css' %}">
+    <script src="{% static 'scripts/add_sight.js' %}"></script>
+
+
+</head>
+
+<body>
+    <h1 id="site-title">Sasquatch Websighting</h1>
+    <h3>Report a sight</h3>
+
+    <div id="content">
+       <div id="left-side">
+        <label for="sight-name">Location:</label>
+        <input type="text" id="location-name" name="location"><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="sas-amount">Number of sasquatches:</label>
+        <input type="number" id="sas-amount" name="sas-amount" min="0" step="1"><br>
+
+        <label for="description">What Happened?</label>
+        <textarea id="description" name="description" rows="6" cols="40"></textarea><br>
+    </div>
+
+    <button onclick="addSight()">Report</button>
+</body>
+
+</html>

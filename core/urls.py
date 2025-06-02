@@ -6,10 +6,10 @@ urlpatterns = [
     path("", views.index, name="index"),
     path('login/', views.login_or_signup, name='login'),  
     path('signup/', views.login_or_signup, name='signup'),  
-    path('recipes/', views.recipes, name="recipes"),
-    path('add_recipe/', views.add_recipe, name="add_recipe"),
-    path('edit_recipe/', views.edit_recipe, name="edit_recipe"),
-    path('view_recipe/', views.view_recipe, name="view_recipe"),
+    path('dashboard/', views.dashboard, name="dashboard"),
+    path('add_sight/', views.add_sight, name="add_sight"),
+    path('edit_sight/', views.edit_sight, name="edit_sight"),
+    path('view_sight/', views.view_sight, name="view_sight"),
 
     path('sign_up/', views.sign_up, name="sign_up"),
     path('log_in/', views.log_in, name="log_in"),
@@ -18,7 +18,11 @@ urlpatterns = [
     path('signup/sign_up/', views.sign_up, name="sign_up"),
     path('signup/log_in/', views.log_in, name="log_in"),
 
-    path('add_recipe/create_recipe/', views.create_recipe, name="create_recipe"),
-    path('get_recipes/', views.get_recipes, name='get_recipes'),
-    path('recipes/get_recipes/', views.get_recipes, name='get_recipes'),
+    path('dashboard/get_sights/', views.get_sights, name='get_sights'),
+    path('dashboard/delete_sight/', views.delete_sight, name='delete_sight'),
+
+    path('add_sight/import_sight/', views.import_sight, name="import_sight"),
+    path('view_sight/get_specific_sight/', views.get_specific_sight, name='get_specific_sight'),
+
+    
 ]   

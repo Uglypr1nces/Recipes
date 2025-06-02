@@ -11,13 +11,12 @@ class User(models.Model):
         return f"{self.first_name} {self.last_name}"
 
 
-class Recipe(models.Model):
-    name = models.CharField(max_length=100)
-    under_30_minute = models.BooleanField(default=False)
-    posted_by = models.CharField(max_length=100)
-    description = models.TextField()
-    instruction = models.TextField()
-    date = models.DateField(auto_now_add=True)
-
+class Sight(models.Model):
+    id = models.AutoField(primary_key=True)
+    location = models.CharField(max_length=100, null=False, blank=False)
+    posted_by = models.CharField(max_length=100, null=False, blank=False)
+    date = models.CharField(max_length=100, null=False, blank=False)
+    sas_amount = models.IntegerField(default=1, null=False, blank=False)
+    description = models.CharField(max_length=50, null=False, blank=False)
     def __str__(self):
-        return self.name
+        return self.location

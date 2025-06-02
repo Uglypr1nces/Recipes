@@ -5,37 +5,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes</title>
-    <link rel="stylesheet" href="{% static 'styles/recipes.css' %}">
-    <script src="{% static 'scripts/recipes.js' %}"></script>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'scripts/dashboard.js' %}"></script>
 
 </head>
 
 <body>
-    <h1 id="title"></h1>
+    <h1 id="site-title"> Sasquatch Websighting</h1>
+    <h3 id="site-username">Dashboard</h1>
+    
+    <button onclick="addSight()">Report a sighting</button>
+    <button onclick="logout()">logout</button>
 
     <div id="content">
-        <div id="top-bar">
-            <p>All posted recipes:</p>
-
-            <button onclick="addRecipe()">+ Create</button>
-            <button onclick="logOut()">logout</button>
-        </div>
-
         <table border="1" cellpadding="8" cellspacing="0">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Under</th>
+                    <th>location</th>
                     <th>Posted By</th>
+                    <th>Date</th>
+                    <th>Skeptics</th>
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody id="recipe-table-body">
+            <tbody id="sight-table-body">
             </tbody>
         </table>
-
     </div>
 </body>
 

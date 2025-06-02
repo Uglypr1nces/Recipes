@@ -1,0 +1,25 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Sight</title>
+    <link rel="stylesheet" href="{% static 'styles/view_sight.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'scripts/view_sight.js'%}"></script>
+</head>
+<body>
+
+    <div id="content">
+        <h2 id="header">Location & Date</h2>
+
+        <p>What happened:</p>
+
+
+        <p id="description">Description</p>
+
+        <h3 id="reported-by">Reported by1</h3>
+    </div>
+</body>
+</html>
