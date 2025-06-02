@@ -23,6 +23,5 @@ urlpatterns = [
 
     path('add_sight/import_sight/', views.import_sight, name="import_sight"),
     path('view_sight/get_specific_sight/', views.get_specific_sight, name='get_specific_sight'),
-
-    
+    path('edit_sight/change_sight/', views.change_sight, name='change_sight'),    
 ]   

@@ -33,8 +33,11 @@ function checkValues() {
     return true;
 
 }
-function addSight() {
+
+function editSight() {
     if (checkValues()) {
+        const params = new URLSearchParams(window.location.search);
+        const sightId = params.get('id')
         const location = document.getElementById("location-name").value.trim();
         const date = document.getElementById("date").value.trim();
         const sas_amount = Number(document.getElementById("sas-amount").value);
@@ -43,8 +46,9 @@ function addSight() {
 
         $.ajax({
             type: "POST",
-            url: "import_sight/",
+            url: "change_sight/",
             data: {
+                id: sightId,
                 location: location,
                 date: date,
                 sas_amount: sas_amount,

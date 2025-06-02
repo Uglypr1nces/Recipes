@@ -119,3 +119,30 @@ def delete_sight(request):
         except Exception as e:
             print(e)
 
+
+
+@csrf_exempt
+def change_sight(request):
+    if request.method == "POST":
+        id = request.POST.get('id')
+        new_location = request.POST.get('location')
+        new_date = request.POST.get('date')
+        new_sas_amount = request.POST.get('sas_amount')
+        new_description = request.POST.get('description')
+        made_by = request.POST.get('made_by')
+        try:
+            sight = Sight.objects.filter(id=id).first()
+            if sight:
+                sight.location = new_location
+                sight.date = new_date
+                sight.sas_amount = new_sas_amount
+                sight.description = new_description
+                sight.posted_by = made_by
+                sight.save()
+                return HttpResponse("Sight edited")
+            else:
+                return HttpResponse("Sight not found", status=404)
+
+        except Exception as e:
+            print(e)
+            return HttpResponse("Error editing sight", status=500)
