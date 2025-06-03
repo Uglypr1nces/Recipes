@@ -72,19 +72,27 @@ function editSight(id){
     console.log("Editing sight");
 }
 
-function deleteSight(id){
-    $.ajax({
-      type: "POST",
-      url: "delete_sight",
-      id: id,
-      success: function () {
-        console.log("deleting sight");
-      },
-      error: function () {
-        alert("Failed to delete sight.");
-      },
-    });
+function deleteSight(id) {
+  $.ajax({
+    type: "POST",
+    url: "delete_sight/",
+    data: { id: id },
+    success: function () {
+      console.log("deleting sight");
+      const button = document.querySelector(`button[onclick="deleteSight(${id})"]`);
+      if (button) {
+        const row = button.closest("tr");
+        if (row) {
+          row.remove();
+        }
+      }
+    },
+    error: function () {
+      alert("Failed to delete sight.");
+    },
+  });
 }
+
 
 function addSight() {
     window.location.href = "/add_sight/";

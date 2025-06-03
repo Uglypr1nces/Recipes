@@ -69,3 +69,8 @@ function editSight() {
 function returnHome() {
   window.location.href = "/dashboard/";
 }
+
+
+function logout() {
+    window.location.href = "/login/";
+}

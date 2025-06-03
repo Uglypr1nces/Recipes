@@ -5,9 +5,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     username.textContent = "Welcome, " + localStorage.getItem("first_name");
 });
 
-function returnHome() {
-  window.location.href = "/dashboard/";
-}
 
 function checkLogged() {
     if (localStorage.getItem("first_name") === null) {
@@ -36,4 +33,12 @@ function viewSight(id){
         alert("Failed to load sight. Please try again later.");
       },
     });
+}
+
+function returnHome() {
+  window.location.href = "/dashboard/";
+}
+
+function logout() {
+    window.location.href = "/login/";
 }
